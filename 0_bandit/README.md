@@ -6,4 +6,5 @@ The Bandit wargame is aimed at absolute beginners. It will teach the basics need
 
 ## SSH Information
 `Host: bandit.labs.overthewire.org`
+
 `Port: 2220`
