@@ -4,11 +4,11 @@
 ## Table of Contents
 Following the suggested order of difficulty:
 
-1. [Bandit](https://github.com/odacavo/overthewire/tree/main/0_bandit) - Beginner friendly CTF essentials
-2. Natas - Serverside web-security
-3. Leviathan - *nix commands
-4. Krypton - cipher and cryptanalysis
-5. Narnia - Bug exploitation
-6. Behemoth - privilege escalation, buffer overflows, race conditions
-7. Utumno - Behemoth, but harder
-8. Maze - reverse engineering, exploitation, programming
+0. [Bandit](https://github.com/odacavo/overthewire/tree/main/0_bandit) - Beginner friendly CTF essentials
+1. Natas - Serverside web-security
+2. Leviathan - *nix commands
+3. Krypton - cipher and cryptanalysis
+4. Narnia - Bug exploitation
+5. Behemoth - privilege escalation, buffer overflows, race conditions
+6. Utumno - Behemoth, but harder
+7. Maze - reverse engineering, exploitation, programming

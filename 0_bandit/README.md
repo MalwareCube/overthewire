@@ -8,3 +8,6 @@ The Bandit wargame is aimed at absolute beginners. It will teach the basics need
 `Host: bandit.labs.overthewire.org`
 
 `Port: 2220`
+
+## Table of Contents
+0. [Level 0](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_0)
