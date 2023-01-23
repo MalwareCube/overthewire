@@ -1,5 +1,5 @@
 # OverTheWire
-[OverTheWire](https://overthewire.org/wargames/) is a suite of CTFs/wargames to help learn and practice security concepts and penetration testing. This repo includes my writeups, python scripts, and code that I've used to solve the various games and challenges from OverTheWire.
+[OverTheWire](https://overthewire.org/wargames/) is a suite of CTFs/wargames to help learn and practice security concepts and penetration testing. This repo includes my writeups, scripts, and code that I've used to solve the various games and challenges from OverTheWire.
 
 ## Table of Contents
 Following the suggested order of difficulty:
