@@ -2,7 +2,7 @@
 
 ## Level Goal
 
-The password for the next level is stored in a hidden file in the inhere directory.
+The password for the next level is stored in a hidden file in the `inhere` directory.
 
 ## Solution
 First, connect to bandit3 using the password uncovered on Level 2-3. The solution for this level requires the use of the `-a` argument for the `ls` command. The `-a` argument is used to list all files (including hidden ones). Hidden files are used all over the Linux filesystem are prefixed with a `.` within the filename. These hidden files will not typically show up when the `ls` command is used with no arguments.
