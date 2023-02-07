@@ -5,7 +5,7 @@
 The password for the next level is stored in the file data.txt next to the word millionth.
 
 ## Solution
-
+For this level, we can use the `grep` command to search for the `millionth` string in `data.txt`. This will simply cat out the file but only show us the line where the word "millionth" is displayed, which consequently reveals the password.
 
 
 ```bash

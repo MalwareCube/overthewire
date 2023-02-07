@@ -25,4 +25,4 @@ bandit0@bandit:~$ whoami
 bandit0
 ```
 
-With that, Level 0 is now complete. We don't need to find any flags until Level 1, which is up next!
+With that, Level 0 is now complete. We don't need to find any flags until Level 1.
