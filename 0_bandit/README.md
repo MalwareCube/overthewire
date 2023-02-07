@@ -42,3 +42,6 @@ The Bandit wargame is aimed at absolute beginners. It will teach the basics need
 - [Level 28 - Level 29](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_28-29)
 - [Level 29 - Level 30](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_29-30)
 - [Level 30 - Level 31](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_30-31)
+- [Level 31 - Level 32](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_31-32)
+- [Level 32 - Level 33](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_32-33)
+- [Level 33 - Level 34](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_33-34)
