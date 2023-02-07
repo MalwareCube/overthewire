@@ -10,7 +10,7 @@ The Bandit wargame is aimed at absolute beginners. It will teach the basics need
 `Port: 2220`
 
 ## Table of Contents
-- [Level 0](https://github.com/odacavo/overthewire/tree/main/0_bandit/level_00-00)
+- [Level 0](https://github.com/odacavo/overthewire/tree/main/00_bandit/level_00-00)
 - [Level 0 - Level 1](https://github.com/odacavo/overthewire/tree/main/00_bandit/level_00-01)
 - [Level 1 - Level 2](https://github.com/odacavo/overthewire/tree/main/00_bandit/level_01-02)
 - [Level 2 - Level 3](https://github.com/odacavo/overthewire/tree/main/00_bandit/level_02-03)
