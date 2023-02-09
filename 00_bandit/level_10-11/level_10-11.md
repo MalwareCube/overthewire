@@ -5,7 +5,7 @@
 The password for the next level is stored in the file data.txt, which contains base64 encoded data.
 
 ## Solution
-
+The solution for this level simply requires the use of the `base64` command. The password in this case was encoded in base64, so we'll need to provide the `-d` flag to `decode` the base64 data.
 
 
 ```bash

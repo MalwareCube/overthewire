@@ -5,7 +5,9 @@
 The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: `mkdir /tmp/myname123`. Then copy the datafile using cp, and rename it using mv (read the manpages!)
 
 ## Solution
+The solution for this level requires the use of several different compression tools (`tar`, `gzip`, and `bzip2`) to expand the repeatedly compressed data.txt file. Firstly, after copying the file to a temp (writable) directory, we must use `xxd -r` to reverse a hexdump of the file. From there, by running `file`, we can see that it is a `gzip compressed data` file. We can rename it to have a `.gz` extension and then run `gzip -d` to decompress the file, resulting in a `bzip2 compressed data` file. 
 
+Repeating a similar process for decompressing `bzip2` files, `tar` archives, and `gzip` files, we eventually uncover a file that contains `ASCII text` which is the password for the next level.
 
 
 ```bash
