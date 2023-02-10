@@ -7,7 +7,15 @@ There is a setuid binary in the homedirectory that does the following: it makes 
 NOTE: Try connecting to your own network daemon to see if it works as you think.
 
 ## Solution
+This level will require establishing concurrent `nc` listeners to send and receive data back and forth on the same port, as well as the `fg` command to switch between them. 
 
+Firstly, we can set up an initial `nc` listener on port 4444 with `nc -l 4444`. We can back out of this connection by typing `^Z` (ctrl + c).
+
+Next, the `./suconnect` binary in the home directory has the `setuid` binary set, and is owned by `bandit21`. We can use this binary to connect to port 4444 to establish a connection with `./suconnect 4444`. Again, we can back out of this connection by typing `^Z` (ctrl + c).
+
+Now that a connection has been made we can return to our first `nc` listener by using the command `fg` and supplying the argument `1`. From here, we're back in our `nc` listener, and we can provide (paste) the password from the previous level. We can then back out of the connection again to return to our recipient.
+
+We can use the `fg` command again and supply the argument `2` to return to our second connection. We can see that the password was correct, and that the password for the next level was sent back to our original listener. We can stop this listener `^Z`, and `fg 1` to return, where we receive the password for the next level.
 
 ```bash
 bandit20@bandit:~$ ls
