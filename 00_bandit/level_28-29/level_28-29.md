@@ -8,6 +8,8 @@ Clone the repository and find the password for the next level.
 
 ## Solution
 
+
+
 ```bash
 bandit28@bandit:~$ mktemp -d
 /tmp/tmp.9Ycg0tTTQ6

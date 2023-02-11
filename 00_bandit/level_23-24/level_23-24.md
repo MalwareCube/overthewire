@@ -9,7 +9,11 @@ NOTE: This level requires you to create your own first shell-script. This is a v
 NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…
 
 ## Solution
+In `/etc/cron.d/cronjob_bandit24`, there is a cron job that runs every minute, executing `cronjob_bandit24.sh`, run by user `bandit24`. If we look at that script, we can see it first executes any executable scripts in the `/foo` folder that user `bandit23` owns. Then, it deletes all files in the `/var/spool/bandit24/foo` directory.
 
+Essentially, we can take advantage of this by getting the `bandit24` user to execute any script on our behalf. Simply use `vi` to create a `.sh` script that reads the file in `/etc/bandit_pass/bandit24` and outputs it (`>`) to a file in the writable `/tmp` directory.
+
+From there, we just need to wait a minute for the cron job to run, and then we will be able to `cat` the new file that was created, containing the password.
 
 ```bash
 bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24

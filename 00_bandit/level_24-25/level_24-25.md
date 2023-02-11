@@ -6,7 +6,13 @@ A daemon is listening on port 30002 and will give you the password for bandit25 
 You do not need to create new connections each time.
 
 ## Solution
+This level is a brute force challenge, and first requires us to `nc localhost 30002`, where there is a listener. From there, we are prompted to enter the password for the previous level as well as the correct four digit pincode on a single line.
 
+We can write a script to do exactly that. In the script, we first create a `for` loop which will iterate through numbers 0000 to 9999. We can do this with the following syntax: `for i in {0001..9999}; do`, where `i` will represent the current iteration, or in this case, four digit pincode.
+
+Within that `for` loop, we can simply `echo` a string containing the password plus the variable `$i`. This will output `password 0000`, `password 0001`, `password 0002` and so on - this is brute forcing.
+
+Finally we can finish the loop with the `done` syntax, and we can then pipe that out to the `nc localhost 30002` command. This will ensure the output of each brute force attempt will be sent to the `nc` connection. From there, it's just a matter of waiting as the script iterates, and eventually we reveal the password.
 
 ```bash
 bandit24@bandit:~$ nc localhost 30002
@@ -15,13 +21,6 @@ VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar 0000
 Wrong! Please enter the correct pincode. Try again.
 
 bandit24@bandit:~$ vi /tmp/brute.sh
-
-
-while true; do
-    echo 'lol'
-    sleep 1
-done | nc -l 9000
-
 
 #!/bin/bash
 

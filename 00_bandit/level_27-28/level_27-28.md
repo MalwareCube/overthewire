@@ -7,6 +7,12 @@ There is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo
 Clone the repository and find the password for the next level.
 
 ## Solution
+This level starts dealing with `git`, the version control system. First, in order to clone the repository in question, we must make a writable temporary directory. We can do this with `mktemp -d` and then `cd` into the temporary directory that was created.
+
+From here, we can simply `git clone` the repository at the URL listed above. *Important* - make sure to add the SSH port `2220` at the end of `localhost`, as that is the specific port that the server uses - you will get an error otherwise.
+
+Once it has been cloned, we can `cd` into the repo, and `cat` the `README` file to get the password.
+
 
 ```bash
 bandit27@bandit:~$ mktemp -d
