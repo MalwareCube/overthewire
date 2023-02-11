@@ -7,6 +7,9 @@ There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo
 Clone the repository and find the password for the next level.
 
 ## Solution
+Another `git` level, where we can clone the repository into the `tmp` directory. From here, we can see a `README.md` file, which does not offer anything useful. We've previously looked at `git` branches and logs (commits), however, we can also look at `tags` for anything interesting. By running `git tag` we can see there is a tag called `secret`, which is obviously interesting.
+
+If we run `git show secret`, we can simply reveal the password!
 
 ```bash
 bandit30@bandit:~$ mktemp -d

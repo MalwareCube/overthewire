@@ -7,6 +7,15 @@ There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo
 Clone the repository and find the password for the next level.
 
 ## Solution
+The last `git` level so far! Firstly, clone the repo into a `tmp` directory. The `README.md` file asks us to push a file to the remote repository in order to retrieve the password. It also gives us the details of what to include in the file named `key.txt`.
+
+First, we can create `key.txt` by running `echo "May I come in?"` and sending the output (`>`) to `key.txt`.
+
+From here, there are a couple of `git` specific steps we need to perform. First we need to run `add key.txt` to stage the `key.txt` file in the commit. It then gives us a warning that the file path we are trying to add is actually part of the `.gitignore` file (a file which indicates which paths/files you want to exclude from git). So to get around this,w e can add `-f` to the `git add` command to force this.
+
+Next, we need to run `git commit -m "enter text here"`. the `commit` command is used to add a text description to record the changes to the repository.
+
+Lastly, we can run `git push origin master` to push the commit to the `master` branch. We can then retrieve the password from the verbose success messaging in the command line from the push.
 
 ```bash
 bandit31@bandit:~$ mktemp -d

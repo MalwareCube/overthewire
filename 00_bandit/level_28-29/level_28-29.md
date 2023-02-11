@@ -7,8 +7,11 @@ There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo
 Clone the repository and find the password for the next level.
 
 ## Solution
+This level requires us to clone another `git` repo in a temporary directory. From here, we can see a `README.md` file, upon reading, shows potential credentials for the next level. However, the password has been replaced with `xxxxxxxxxx`. Because `git` is a version control system, we can potentially see if there are previous versions of this file, and if so, we can move back in time to try to reveal if the password was ever committed to the repo in cleartext.
 
+To do this, run `git log`. From here, we can see two previous commits before the `HEAD` / current version. The current commit displays the comment `fix info leak` which means the password is likely in the previous commit. We can switch to that previous commit by running `git checkout 2c1f82f75ab09c89166dd9e6e351bf479fb2d48f` where that long hash relates to the commit itself.
 
+Now that we've essentially gone "back in time", we can now `cat README.md` to reveal the cleartext password for the next level that was once committed into the repo.
 
 ```bash
 bandit28@bandit:~$ mktemp -d

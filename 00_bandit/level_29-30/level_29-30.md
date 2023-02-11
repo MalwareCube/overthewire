@@ -7,6 +7,12 @@ There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo
 Clone the repository and find the password for the next level.
 
 ## Solution
+The solution for this level involves `git` again. Once the repo has been cloned into a `tmp` directory, we can `cat` the `README.md` file to reveal the credentials for the next level, but with a note that passwords will not be committed in production.
+
+The `git log` output doesn't show anything too promising, but the note about passwords not in production is a hint that there may be a development branch in this repo that we can switch to. To check, we can run `git branch` to list the different branches in the repo, revealing one titled `origin/dev`.
+
+As this is quite promising, we can switch to this branch with `git checkout origin/dev`. Once in the development branch, we can `cat README.md` and sure enough, we reveal the password.
+
 
 ```bash
 bandit29@bandit:~$ mktemp -d
