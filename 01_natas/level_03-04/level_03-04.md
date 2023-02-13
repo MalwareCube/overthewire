@@ -37,6 +37,7 @@ Knowing what the output looks like, we can `| grep password` to quickly extract 
 ```bash
 curl http://natas4.natas.labs.overthewire.org/ -s -u natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm \
 -H "Referer: http://natas5.natas.labs.overthewire.org/" | grep password
+Access granted. The password for natas5 is Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
 ```
 
 ## Python requests
