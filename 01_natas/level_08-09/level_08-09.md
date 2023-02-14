@@ -53,6 +53,8 @@ American
 Americanism
 ```
 
+## Exploit payload
+
 Since we were able to "inject" an additional flag to the executed command, this looks like it may be vulnerable!
 
 To skip the trial and error, I eventually found out it was possible to pipe the end of the command (`|`) and execute the `cat` command. Using a similar directory traversal attack like in `Level 06 - 07`, we can `cat` the `../../../../etc/natas_webpass/natas10` file to reveal the password.
