@@ -1,4 +1,4 @@
-# Level 4 - Level 5: Natas - OverTheWire
+# Level 5 - Level 6: Natas - OverTheWire
 
 ## Level Goal
 
