@@ -5,7 +5,7 @@ headers = {
 }
 
 response = requests.get(
-    'https://natas4.natas.labs.overthewire.org/',
+    'http://natas4.natas.labs.overthewire.org/',
     headers=headers,
     auth=('natas4', 'tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm'),
 )

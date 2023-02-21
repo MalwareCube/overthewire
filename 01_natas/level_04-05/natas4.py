@@ -5,7 +5,7 @@ cookies = {
 }
 
 response = requests.get(
-    'https://natas5.natas.labs.overthewire.org',
+    'http://natas5.natas.labs.overthewire.org',
     cookies=cookies,
     auth=('natas5', 'Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD'),
 )
