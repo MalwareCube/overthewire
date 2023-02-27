@@ -54,7 +54,7 @@ After understanding XOR encryption more, we can infer that the encrypted text wo
 
 ## Decrypting The Default Array
 
-We can create our own PHP code to make this happen. First, let's create `deserialize.php`:
+We can create our own PHP code to make this happen. First, let's create `decode.php`:
 
 ```php
 <?php
@@ -89,7 +89,7 @@ Using the original code from the sourcecode and changing it a bit, several thing
 4. The last line executes the `xor_encrypt` function, and passes the ciphertext `$cookie` value and the plaintext `$jsoncookie` value. When executed, we will obtain the missing piece: the key!
 
 ```bash
-└─$ php deserialize.php 
+└─$ php decode.php 
 KNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKL     
 ```
 
@@ -98,7 +98,7 @@ We can see the repeating pattern `KNHL`, which is in fact the key. Because the k
 ## Encrypting A Malicious COokie
 Now that we know the key used for XOR encryption, we can modify the original array, change the showpassword value to `yes`, then encrypt it in the same way in order to generate a new cookie.
 
-First, let's create `serialize.php`:
+First, let's create `encode.php`:
 
 ```php
 <?php
